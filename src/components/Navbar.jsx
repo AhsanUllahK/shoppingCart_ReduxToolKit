@@ -1,7 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   MDBContainer,
-  MDBInputGroup,
   MDBNavbar,
   MDBNavbarBrand,
   MDBBtn,
@@ -13,8 +13,13 @@ const Navbar = () => {
       <MDBContainer fluid>
         <MDBNavbarBrand>Navbar</MDBNavbarBrand>
         <MDBNavbarBrand></MDBNavbarBrand>
-        <span>All Products</span>
-        <MDBBtn color="dark">Cart(0)</MDBBtn>
+        <span>
+          {" "}
+          <Link to="/">All Products</Link>{" "}
+        </span>
+        <MDBBtn color="dark">
+          <Link to="/cart">Cart(0)</Link>
+        </MDBBtn>
       </MDBContainer>
     </MDBNavbar>
   );
